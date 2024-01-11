@@ -1,2 +1,1 @@
-# weather-app
-Practice for async functions and API use.
+This is a weather app for practicing API, async/await and try..catch uses.
