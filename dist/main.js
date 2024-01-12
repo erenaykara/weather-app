@@ -26,7 +26,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./api.js */ \"./src/api.js\");\n\ndocument.addEventListener(\"DOMContentLoaded\", function () {\n  var content = document.querySelector(\"#content\");\n  var citySearch = document.querySelector('#city');\n  citySearch.addEventListener('keydown', function (e) {\n    if (e.key === 'Enter') {\n      (0,_api_js__WEBPACK_IMPORTED_MODULE_0__.getWeather)(citySearch.value);\n    }\n  });\n});\n\n//# sourceURL=webpack://my-webpack-project/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./api.js */ \"./src/api.js\");\n/* harmony import */ var _styles_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./styles.css */ \"./src/styles.css\");\n\n\ndocument.addEventListener(\"DOMContentLoaded\", function () {\n  var content = document.querySelector(\"#content\");\n  var citySearch = document.querySelector('#city');\n  citySearch.addEventListener('keydown', function (e) {\n    if (e.key === 'Enter') {\n      (0,_api_js__WEBPACK_IMPORTED_MODULE_0__.getWeather)(citySearch.value);\n    }\n  });\n});\n\n//# sourceURL=webpack://my-webpack-project/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/styles.css":
+/*!************************!*\
+  !*** ./src/styles.css ***!
+  \************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://my-webpack-project/./src/styles.css?");
 
 /***/ })
 
