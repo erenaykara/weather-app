@@ -67,8 +67,7 @@ body {
 
 #country {
   font-size: 32px;
-  color: red;
-  border: 3px solid violet;
+  color: rgb(7, 150, 245);
   width: -moz-max-content;
   width: max-content;
   min-width: 150px;
