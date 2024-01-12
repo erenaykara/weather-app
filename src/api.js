@@ -1,22 +1,44 @@
+const temperature = document.querySelector("#temperature");
+let currentTemperatureInF;
+let currentTemperatureInC;
+
 export async function getWeather(city) {
-    const apiKey = '068d4d16efff463ca3111654241101';
-    let response = await fetch(`http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}&aqi=no`, {mode: 'cors'})
-    let response2 = await response.json();
-    console.log(response2);
-    displayWeather(response2);
+  const apiKey = "068d4d16efff463ca3111654241101";
+  let response = await fetch(
+    `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}&aqi=no`,
+    { mode: "cors" }
+  );
+  let data = await response.json();
+  console.log(data);
+  displayWeather(data);
+  return data;
 }
 
 export async function displayWeather(weatherData) {
-    const h2 = document.querySelector('#country');
-    h2.textContent = weatherData.location.country;
-    const condition = document.querySelector('#condition')
-    const localTime = document.querySelector('#local-time')
-    const humidity = document.querySelector('#humidity')
-    //temperature
-    const temperature = document.querySelector("#temperature");
-    temperature.textContent = weatherData.current.temp_c + 'ºC';
-    localTime.textContent = weatherData.location.localtime;
-    //feels like
-    condition.textContent = weatherData.current.condition.text;
-    humidity.textContent = weatherData.current.humidity;
+  const h2 = document.querySelector("#country");
+  h2.textContent = weatherData.location.country;
+  const condition = document.querySelector("#condition");
+  const localTime = document.querySelector("#local-time");
+  const humidity = document.querySelector("#humidity");
+
+  temperature.textContent = weatherData.current.temp_c + "ºC";
+  localTime.textContent = weatherData.location.localtime;
+  //add a feels like
+  condition.textContent = weatherData.current.condition.text;
+  humidity.textContent = weatherData.current.humidity;
+
+  currentTemperatureInC = weatherData.current.temp_c + "ºC";
+  currentTemperatureInF = weatherData.current.temp_f + "ºF";
+}
+
+export async function toggleMeasure(event) {
+  if (currentTemperatureInC) {
+    if (event.target.textContent === "Celsius") {
+      temperature.textContent = currentTemperatureInF;
+      event.target.textContent = "Fahrenheit";
+    } else if (event.target.textContent === "Fahrenheit") {
+      temperature.textContent = currentTemperatureInC;
+      event.target.textContent = "Celsius";
+    }
+  }
 }
