@@ -22,7 +22,7 @@ const config = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: 'template.html',
+            template: './src/template.html',
         }),
 
         new MiniCssExtractPlugin(),
