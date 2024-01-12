@@ -43,7 +43,8 @@ body {
   border-radius: 15px;
   height: 700px;
   width: 800px;
-  background-color: #aaa;
+  background-color: #ddd;
+  border: 3px solid gray;
 }
 
 #content > h2 {
@@ -70,18 +71,34 @@ body {
   border: 3px solid violet;
   width: -moz-max-content;
   width: max-content;
-  margin: 0 auto;
+  min-width: 150px;
+  min-height: 40px;
+  margin: 0 auto 10px;
 }
 
 .container {
+  position: relative;
   margin: 0 auto;
   background-color: lightblue;
-  border: 5px solid black;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+.container > #city-container {
+  font-weight: 700;
+  position: relative;
+  top: 5px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .small-container {
-  border: 1px solid black;
   display: grid;
   grid-template: 1fr/1fr 1fr;
   justify-items: left;
+  align-items: center;
+}
+
+.small-container > p:first-child {
+  font-weight: 700;
 }/*# sourceMappingURL=styles.css.map */

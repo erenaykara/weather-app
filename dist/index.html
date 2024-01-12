@@ -13,14 +13,19 @@
     </div>
     <div id="content">
         <h2>Weather data</h2>
+        <h2 id="country"></h2>
         <div class="container">
-            City: <input type="text" id="city" placeholder="Type in the city">
+            <div id="city-container">City: <input type="text" id="city" placeholder="Type in the city"></div>
             <div class="small-container">
-                Condition:
+                <p>Temperature:</p>
+                <p id="temperature"></p>
+            </div>
+            <div class="small-container">
+                <p>Condition:</p>
                 <p id="condition"></p>
             </div>
             <div class="small-container">
-                Local time:
+                <p>Local time:</p>
                 <p id="local-time"></p>
             </div>
             <div class="small-container">

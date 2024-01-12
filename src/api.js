@@ -7,18 +7,15 @@ export async function getWeather(city) {
 }
 
 export async function displayWeather(weatherData) {
-    const container = document.querySelector('.container')
-    const h2 = document.createElement('h2');
-    h2.id = 'country';
+    const h2 = document.querySelector('#country');
     h2.textContent = weatherData.location.country;
-    container.before(h2);
     const condition = document.querySelector('#condition')
     const localTime = document.querySelector('#local-time')
     const humidity = document.querySelector('#humidity')
-    
-    //country
-    localTime.textContent = weatherData.location.localtime;
     //temperature
+    const temperature = document.querySelector("#temperature");
+    temperature.textContent = weatherData.current.temp_c + 'ºC';
+    localTime.textContent = weatherData.location.localtime;
     //feels like
     condition.textContent = weatherData.current.condition.text;
     humidity.textContent = weatherData.current.humidity;
