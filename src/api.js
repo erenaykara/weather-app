@@ -1,6 +1,6 @@
 export async function getWeather(city) {
     const apiKey = '068d4d16efff463ca3111654241101';
-    let response = await fetch(`http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}&aqi=no`)
+    let response = await fetch(`http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}&aqi=no`, {mode: 'cors'})
     let response2 = await response.json();
     console.log(response2);
     displayWeather(response2);
