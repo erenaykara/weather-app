@@ -5,9 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="index.js"></script>
+    <script src="index.js" type="module"></script>
 </head>
 <body>
-    
+    <div id="header">
+        <h1 id="title">Weather App</h1>
+    </div>
+    <div id="content">
+        <h2>Weather data</h2>
+        <div class="container">
+            <label for="city">City: <input type="text" id="city" placeholder="Type in the city"></label>
+            <label for="condition">Condition:
+                <p id="condition"></p>
+            </label>
+            <label for="local-time">Local time:
+                <p id="local-time"></p>
+            </label>
+            <label for="humidity">Humidity:
+                <p id="humidity"></p>
+            </label>
+        </div>
+    </div>
 </body>
 </html>
