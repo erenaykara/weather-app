@@ -7,6 +7,7 @@ $title-size: 48px;
 body {
     margin: 0;
     padding: 0;
+    background-image: url('../src/images/bg-image.jpg');
 }
 
 ::-webkit-scrollbar {
@@ -63,8 +64,23 @@ body {
     border-radius: 5px;
 }
 
+#country {
+    font-size: 32px;
+    color: red;
+    border: 3px solid violet;
+    width: max-content;
+    margin: 0 auto;
+}
+
 .container {
     margin: 0 auto;
-    background-color: blue;
+    background-color: lightblue;
     border: 5px solid black;
+}
+
+.small-container {
+    border: 1px solid black;
+    display: grid;
+    grid-template: 1fr / 1fr 1fr;
+    justify-items: left;
 }

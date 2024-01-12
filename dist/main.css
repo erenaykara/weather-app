@@ -8,6 +8,7 @@
 body {
   margin: 0;
   padding: 0;
+  background-image: url(479d9694335c9ddb39a4.jpg);
 }
 
 ::-webkit-scrollbar {
@@ -66,8 +67,24 @@ body {
   border-radius: 5px;
 }
 
+#country {
+  font-size: 32px;
+  color: red;
+  border: 3px solid violet;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 0 auto;
+}
+
 .container {
   margin: 0 auto;
-  background-color: blue;
+  background-color: lightblue;
   border: 5px solid black;
+}
+
+.small-container {
+  border: 1px solid black;
+  display: grid;
+  grid-template: 1fr/1fr 1fr;
+  justify-items: left;
 }
