@@ -1,4 +1,5 @@
 import { getWeather } from './api.js'
+import './styles.css'
 
 document.addEventListener("DOMContentLoaded", () => {
   const content = document.querySelector("#content");
