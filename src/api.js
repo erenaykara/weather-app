@@ -1,3 +1,4 @@
+const toggleMeasureBtn = document.querySelector("#toggle-measure");
 const temperature = document.querySelector("#temperature");
 let currentTemperatureInF;
 let currentTemperatureInC;
@@ -11,6 +12,7 @@ export async function getWeather(city) {
   let data = await response.json();
   console.log(data);
   displayWeather(data);
+  fixTemperatureButton();
   return data;
 }
 
@@ -41,4 +43,8 @@ export async function toggleMeasure(event) {
       event.target.textContent = "Celsius";
     }
   }
+}
+
+function fixTemperatureButton() {
+  toggleMeasureBtn.textContent = 'Celsius';
 }
