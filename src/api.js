@@ -12,7 +12,7 @@ export async function getWeather(city) {
   let data = await response.json();
   console.log(data);
   displayWeather(data);
-  fixTemperatureButton();
+  resetTemperatureButton();
   return data;
 }
 
@@ -45,6 +45,6 @@ export async function toggleMeasure(event) {
   }
 }
 
-function fixTemperatureButton() {
+function resetTemperatureButton() {
   toggleMeasureBtn.textContent = 'Celsius';
 }
