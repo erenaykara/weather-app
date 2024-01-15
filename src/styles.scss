@@ -77,6 +77,7 @@ body {
 .container {
     position: relative;
     margin: 0 auto;
+    padding: 30px;
     background-color: lightblue;
     border: 2px solid black;
     border-radius: 5px;
@@ -97,6 +98,20 @@ body {
     align-items: center;
 }
 
+.small-container > div {
+    display: grid;
+    grid-template: 1fr / 1fr 1fr;
+}
+
 .small-container > p:first-child {
     font-weight: 700;
+}
+
+button:not(#search-button) {
+    width: 100px;
+    border: none;
+    border-radius: 15px;
+    margin-top: 5px;
+    background-color: #E4E6C3;
+    cursor: pointer;
 }

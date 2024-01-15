@@ -3,7 +3,7 @@ import "./styles.css";
 
 document.addEventListener("DOMContentLoaded", () => {
   const citySearch = document.querySelector("#city");
-  const searchBtn = document.querySelector('#search-button');
+  const searchBtn = document.querySelector("#search-button");
 
   citySearch.addEventListener("keydown", (e) => {
     if (e.key === "Enter") {
@@ -11,10 +11,12 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  searchBtn.addEventListener('click', getWeather(citySearch.value))
+  searchBtn.addEventListener("click", getWeather(citySearch.value));
 
   const toggleMeasureBtn = document.querySelector("#toggle-measure");
-  toggleMeasureBtn.addEventListener("click", (e) =>
-    toggleMeasure(e)
+  const toggleMeasureBtnFeelsLike = document.querySelector(
+    "#toggle-measure-feelslike"
   );
+  toggleMeasureBtn.addEventListener("click", (e) => toggleMeasure(e));
+  toggleMeasureBtnFeelsLike.addEventListener("click", (e) => toggleMeasure(e));
 });
