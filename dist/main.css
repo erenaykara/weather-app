@@ -1,3 +1,6 @@
+/*!******************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/styles.css ***!
+  \******************************************************************/
 :root {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
@@ -110,6 +113,7 @@ body {
 
 button:not(#search-button) {
   width: 100px;
+  height: 50px;
   border: none;
   border-radius: 15px;
   margin-top: 5px;
