@@ -49,9 +49,11 @@ export async function toggleMeasure(event) {
       if (event.target.textContent === "Celsius") {
         temperature.textContent = currentTemperatureInF;
         event.target.textContent = "Fahrenheit";
+        event.target.backgroundColor = '#070';
       } else if (event.target.textContent === "Fahrenheit") {
         temperature.textContent = currentTemperatureInC;
         event.target.textContent = "Celsius";
+        event.target.backgroundColor = '#007';
       }
     }
   }

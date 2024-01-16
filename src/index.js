@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  searchBtn.addEventListener("click", getWeather(citySearch.value));
+  searchBtn.addEventListener("click", () => getWeather(citySearch.value));
 
   const toggleMeasureBtn = document.querySelector("#toggle-measure");
   const toggleMeasureBtnFeelsLike = document.querySelector(
