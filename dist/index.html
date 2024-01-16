@@ -1,1 +1,48 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Weather App</title><link rel="stylesheet" href="main.css"><script src="index.js" type="module"></script><script defer="defer" src="main.js"></script><link href="main.css" rel="stylesheet"></head><body><div id="header"><h1 id="title">Weather App</h1></div><div id="content"><h2>Weather data</h2><h2 id="country"></h2><div class="container"><div id="city-container">City: <input id="city" placeholder="Type in the city"> <button type="button" id="search-button">Search</button></div><div class="small-container"><p>Temperature:</p><div><p id="temperature"></p><button type="button" id="toggle-measure">Celsius</button></div></div><div class="small-container"><p>Feels like:</p><div><p id="feels-like"></p><button type="button" id="toggle-measure-feelslike">Celsius</button></div></div><div class="small-container"><p>Condition:</p><p id="condition"></p></div><div class="small-container"><p>Local time:</p><p id="local-time"></p></div><div class="small-container"><p>Humidity:</p><p id="humidity"></p></div></div></div></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="main.css">
+<script defer src="main.js"></script><link href="main.css" rel="stylesheet"></head>
+<body>
+    <div id="header">
+        <h1 id="title">Weather App</h1>
+    </div>
+    <div id="content">
+        <h2>Weather data</h2>
+        <h2 id="country"></h2>
+        <div class="container">
+            <div id="city-container">City: <input type="text" id="city" placeholder="Type in the city"> 
+                <button type="button" id="search-button">Search</button></div>
+            <div class="small-container">
+                <p>Temperature:</p>
+                <div>
+                    <p id="temperature"></p>
+                    <button type="button" id="toggle-measure">Celsius</button>
+                </div>
+            </div>
+            <div class="small-container">
+                <p>Feels like:</p>
+                <div>
+                    <p id="feels-like"></p>
+                    <button type="button" id="toggle-measure-feelslike">Celsius</button>
+                </div>
+            </div>
+            <div class="small-container">
+                <p>Condition:</p>
+                <p id="condition"></p>
+            </div>
+            <div class="small-container">
+                <p>Local time:</p>
+                <p id="local-time"></p>
+            </div>
+            <div class="small-container">
+                <p>Humidity:</p>
+                <p id="humidity"></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
